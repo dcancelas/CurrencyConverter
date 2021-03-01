@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.Pane?>
+<?import jiconfont.javafx.IconNode?>
+
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="518.0" style="-fx-background-color: #121212;"
+      xmlns="http://javafx.com/javafx/15.0.1" fx:controller="client.Controller">
+   <JFXButton fx:id="button1" buttonType="RAISED" focusTraversable="false" layoutX="209.0" layoutY="180.0"
+              prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #2D2D2D;" text="Botón" textFill="WHITE">
+      <graphic>
+         <IconNode fx:id="iconTest" lineSpacing="1.0" />
+      </graphic>
+   </JFXButton>
+</Pane>

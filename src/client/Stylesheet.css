@@ -1,0 +1,18 @@
+.root {
+    -fx-background-color: #121212;
+}
+.button {
+    -fx-background-color: #2D2D2D;
+}
+
+.text-field, .combo-box, .choice-box {
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}
+.cell {
+    -fx-background-color: #121212;
+    -fx-text-fill: white;
+}
+.cell:hover {
+    -fx-background-color: #2D2D2D;
+}

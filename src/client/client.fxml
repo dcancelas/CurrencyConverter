@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.layout.Pane?>
-<?import jiconfont.javafx.IconNode?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity"
-      prefHeight="400.0" prefWidth="518.0" style="-fx-background-color: #121212;"
-      xmlns="http://javafx.com/javafx/15.0.1" fx:controller="client.Controller">
-   <JFXButton fx:id="button1" buttonType="RAISED" focusTraversable="false" layoutX="209.0" layoutY="180.0"
-              prefHeight="41.0" prefWidth="101.0" style="-fx-background-color: #2D2D2D;" text="Botón" textFill="WHITE">
-      <graphic>
-         <IconNode fx:id="iconTest" lineSpacing="1.0" />
-      </graphic>
-   </JFXButton>
-</Pane>
+<AnchorPane focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="650.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="32.0" prefHeight="39.0" prefWidth="276.0" text="Conversor de divisas" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="281.0" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="173.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="265.0" layoutY="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="currency1Label" alignment="CENTER" contentDisplay="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="currency2Label" alignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="83.0" layoutY="128.0" spacing="20.0" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="128.0">
+         <children>
+            <JFXTextField fx:id="ammountTextField" focusColor="#c9c9c9" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="130.0" promptText="Importe" stylesheets="@Stylesheet.css" unFocusColor="#898989">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="currency1ComboBox" editable="true" focusColor="#c9c9c9" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" promptText="Divisa 1" stylesheets="@Stylesheet.css" unFocusColor="#898989">
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXComboBox fx:id="currency2ComboBox" editable="true" focusColor="#c9c9c9" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" promptText="Divisa 2" stylesheets="@Stylesheet.css" unFocusColor="#898989">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXButton fx:id="convertButton" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#convertCurrency" prefHeight="40.0" prefWidth="85.0" stylesheets="@Stylesheet.css" text="Convertir" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

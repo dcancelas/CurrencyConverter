@@ -5,8 +5,11 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import org.decimal4j.util.DoubleRounder;
 
 import java.io.DataInputStream;
@@ -14,8 +17,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.net.SocketException;
-import java.util.Scanner;
 
 public class Client {
 
@@ -25,6 +26,9 @@ public class Client {
     public JFXButton convertButton;
     public Label currency1Label;
     public Label currency2Label;
+
+    public static String ip = "localhost";
+    public static int port = 4242;
 
     @FXML
     public void initialize() {
@@ -39,7 +43,7 @@ public class Client {
             Socket clienteSocket = new Socket();
             System.out.println("Estableciendo la conexión con el servidor");
 
-            InetSocketAddress addr = new InetSocketAddress("localhost", 4242);
+            InetSocketAddress addr = new InetSocketAddress(ip, port);
             clienteSocket.connect(addr);
 
             DataInputStream dis = new DataInputStream(clienteSocket.getInputStream());
@@ -65,5 +69,12 @@ public class Client {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void goToOptions(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("options/options.fxml"));
+        Stage primaryStage = Main.getPrimaryStage();
+        //System.out.println(primaryStage.getWidth() + " " + primaryStage.getHeight());
+        primaryStage.setScene(new Scene(root, primaryStage.getWidth() - 16, primaryStage.getHeight() - 39));
     }
 }

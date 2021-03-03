@@ -8,6 +8,9 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static Stage pStage;
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("client.fxml"));
@@ -17,6 +20,12 @@ public class Main extends Application {
         primaryStage.setMinHeight(380);
         primaryStage.setResizable(true);
         primaryStage.show();
+
+        pStage = primaryStage;
+    }
+
+    public static Stage getPrimaryStage() {
+        return pStage;
     }
 
 

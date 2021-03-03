@@ -1,11 +1,19 @@
 .root {
     -fx-background-color: #121212;
 }
+
 .button {
     -fx-background-color: #2D2D2D;
 }
+.icon_button {
+    -fx-background-color: none;
+    -fx-background-radius: 45;
+}
+.icon_button:hover {
+    -fx-background-color: #2D2D2D;
+}
 
-.text-field, .combo-box, .choice-box {
+.text-field, .combo-box, .choice-box, .jfx-snackbar-toast {
     -fx-prompt-text-fill: white;
     -fx-text-fill: white;
 }
@@ -15,4 +23,10 @@
 }
 .cell:hover {
     -fx-background-color: #2D2D2D;
+}
+
+.jfx-snackbar-content {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 20;
+    -fx-translate-y: -20;
 }

@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="650.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client">
    <children>
@@ -16,6 +17,13 @@
          <font>
             <Font size="27.0" />
          </font>
+         <graphic>
+            <Label text="hecho por dcancelas" textFill="#898989" translateY="25.0">
+               <font>
+                  <Font size="11.5" />
+               </font>
+            </Label>
+         </graphic>
       </Label>
       <HBox alignment="CENTER" layoutX="265.0" layoutY="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
          <children>
@@ -62,5 +70,13 @@
             </JFXButton>
          </children>
       </HBox>
+      <JFXButton fx:id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="589.0" layoutY="6.0" onAction="#goToOptions" prefHeight="55.0" prefWidth="55.0" scaleX="0.7" scaleY="0.7" styleClass="icon_button" stylesheets="@Stylesheet.css" text=" " textFill="WHITE" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <graphic>
+            <FontIcon iconColor="WHITE" iconLiteral="fas-cog" iconSize="30" scaleX="1.3" scaleY="1.3" strokeLineCap="ROUND" strokeType="OUTSIDE" />
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
    </children>
 </AnchorPane>

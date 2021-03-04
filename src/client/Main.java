@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("client.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/client.fxml"));
         primaryStage.setTitle("Conversor de divisas");
         primaryStage.setScene(new Scene(root));
         primaryStage.setMinWidth(650);

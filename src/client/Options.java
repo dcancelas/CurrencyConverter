@@ -1,7 +1,5 @@
-package client.options;
+package client;
 
-import client.Client;
-import client.Main;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXSnackbarLayout;
@@ -13,8 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import javax.management.Notification;
 
 public class Options {
 
@@ -33,7 +29,7 @@ public class Options {
     }
 
     public void goToMain(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Main.class.getResource("client.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("resources/client.fxml"));
         Stage primaryStage = Main.getPrimaryStage();
         //System.out.println(primaryStage.getWidth() + " " + primaryStage.getHeight());
         primaryStage.setScene(new Scene(root, primaryStage.getWidth() - 16, primaryStage.getHeight() - 39));

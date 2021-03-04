@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
-<AnchorPane focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="650.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Client">
+<AnchorPane focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="650.0" stylesheets="@Stylesheet.css" xmlns:fx="http://javafx.com/fxml/" fx:controller="client.Client">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="32.0" prefHeight="39.0" prefWidth="276.0" text="Conversor de divisas" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="281.0" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="173.0" AnchorPane.topAnchor="30.0">
          <font>

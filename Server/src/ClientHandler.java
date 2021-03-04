@@ -1,5 +1,4 @@
-package server;
-
+import org.decimal4j.util.DoubleRounder;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -25,7 +24,7 @@ public class ClientHandler extends Thread {
 
             System.out.println(currency1 + " -> " + currency2 + " (" + ammount + ")");
             double result = Converter.convert_currency(currency1, currency2, ammount);
-            dos.writeDouble(result);
+            dos.writeDouble(DoubleRounder.round(result, 2));
             System.out.println("Resultado enviado");
 
             System.out.println("\nCerrando la conexión con el cliente");

@@ -72,9 +72,7 @@ public class Client {
     }
 
     public void goToOptions(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Main.class.getResource("resources/options.fxml"));
         Stage primaryStage = Main.getPrimaryStage();
-        //System.out.println(primaryStage.getWidth() + " " + primaryStage.getHeight());
-        primaryStage.setScene(new Scene(root, primaryStage.getWidth() - 16, primaryStage.getHeight() - 39));
+        primaryStage.getScene().setRoot(FXMLLoader.load(Main.class.getResource("resources/options.fxml")));
     }
 }

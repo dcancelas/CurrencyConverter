@@ -29,10 +29,8 @@ public class Options {
     }
 
     public void goToMain(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Main.class.getResource("resources/client.fxml"));
         Stage primaryStage = Main.getPrimaryStage();
-        //System.out.println(primaryStage.getWidth() + " " + primaryStage.getHeight());
-        primaryStage.setScene(new Scene(root, primaryStage.getWidth() - 16, primaryStage.getHeight() - 39));
+        primaryStage.getScene().setRoot(FXMLLoader.load(Main.class.getResource("resources/client.fxml")));
     }
 
     public void saveSettings(ActionEvent actionEvent) {

@@ -25,7 +25,7 @@ public class Server {
     }
 
     public static void readConfigFile() throws IOException {
-        File file = new File("./server.ini");
+        File file = new File("server.ini");
         file.createNewFile();
         Wini ini = new Wini(file);
         port = ini.get("server", "port", int.class);
